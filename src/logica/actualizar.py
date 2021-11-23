@@ -1,19 +1,14 @@
-from src.modelo.cancion import Cancion
-from src.modelo.interprete import Interprete
-from src.modelo.album import Album, Medio
+from src.modelo.EstudianteBase import Interprete
+from src.modelo.estudiante import Album, Medio
 from src.modelo.declarative_base import Session, engine, Base
 
 if __name__ == '__main__':
     session = Session()
 
-    cancion = session.query(Cancion).get(2)
-
-    interprete = session.query(Interprete).get(4)
-    cancion.minutos=5
-    cancion.segundos = 30
-    cancion.compositor = "Pedro Pérez"
-    cancion.interpretes.append(interprete)
-    session.add(cancion)
+    estudiante = session.query(Cancion).get(2)
+    EstudianteBase = session.query(EstudianteBase).get(4)
+    estudiante.nombre = "Pedro Jose"
+    cancion.EstudianteBase.append(interprete)
     session.commit()
 
     session.close()

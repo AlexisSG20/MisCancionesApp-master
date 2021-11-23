@@ -1,5 +1,5 @@
 from src.modelo.declarative_base import engine, Base, session
-from src.modelo.album import Album
+from src.modelo.estudiante import Album
 from src.modelo.cancion import Cancion
 
 class Coleccion():

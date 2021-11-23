@@ -1,7 +1,7 @@
 import random
 from datetime import datetime
 from datetime import timedelta
-from src.modelo.album import Medio
+from src.modelo.estudiante import Medio
 from faker import Faker
 from faker.providers import BaseProvider
 
@@ -47,6 +47,23 @@ class CancionSegundosProvider(BaseProvider) :
          return  random.choice(segundos)
 
 class CancionCompositorProvider(BaseProvider) :
-     def cancionCompositor( self ):
-         compositor=['Leo Rizzi', 'Maluma baby', 'Ben Goldwasser', 'Aleks Syntek','ChavezMax','Faraón','Rauw Alejandro']
+
+    def cancionCompositor( self ):
+         compositor=['Leo Rizzi', 'Maluma baby', 'Ben Goldwasser', 'Aleks Syntek','ChavezMax','Faraón','Rau Alejandro']
          return  random.choice(compositor)
+
+class EstudianteAddProvider(BaseProvider):
+    def EstudianteAdd(self):
+        estudianteadd = ['Juan Torres', 'Esteban Morales', 'Mario Quispe']
+        return random.choice(estudianteadd)
+
+class EstudianteEditProvider(BaseProvider) :
+    def EstudianteEdit( self ):
+         estudainteedit=['Juan Torres', 'Esteban Morales', 'Mario Quispe']
+         return  random.choice(estudainteedit)
+
+class AlbumMedioProvider(BaseProvider):
+    def albumMedio(self):
+        self.estudiantesselect = [ Medio.Seleccionar , Medio.Editar , Medio.Agregar]
+        return random.choice(self.estudiantesselect)
+

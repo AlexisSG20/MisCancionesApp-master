@@ -1,6 +1,6 @@
 from src.modelo.cancion import Cancion
-from src.modelo.interprete import Interprete
-from src.modelo.album import Album, Medio
+from src.modelo.EstudianteBase import Interprete
+from src.modelo.estudiante import Album, Medio
 from src.modelo.declarative_base import Session, engine, Base
 
 if __name__ == '__main__':
@@ -10,11 +10,11 @@ if __name__ == '__main__':
     #Abre la sesión
     session = Session()
 
-    #crear intérpretes
-    interprete1 = Interprete(nombre = "Samuel Torres", texto_curiosidades = "Es colombiano y vive en NY")
-    interprete2 = Interprete(nombre = "Aldo Gavilan", texto_curiosidades = "Cantó a Cuba")
-    interprete3 = Interprete(nombre = "Buena Vista Social club")
-    interprete4 = Interprete(nombre = "Arturo Sandoval", texto_curiosidades = "No sabía quien era")
+    #crear estudiantes
+    estudiante1 = Interprete(nombres = "Samuel Torres", texto_curiosidades = "Es colombiano y vive en NY")
+    estudiante2 = Interprete(nombres = "Aldo Gavilan", texto_curiosidades = "Cantó a Cuba")
+    estudiante3 = Interprete(nombres = "Buena Vista Social club")
+    estudiante4 = Interprete(nombres = "Arturo Sandoval", texto_curiosidades = "No sabía quien era")
     session.add(interprete1)
     session.add(interprete2)
     session.add(interprete3)

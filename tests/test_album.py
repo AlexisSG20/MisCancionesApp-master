@@ -2,9 +2,9 @@ from faker import Faker
 import random
 import unittest
 from src.logica.coleccion import Coleccion
-from src.modelo.album import Album, Medio
+from src.modelo.estudiante import Album, Medio
 from src.modelo.cancion import Cancion, AlbumCancion
-from src.modelo.interprete import Interprete
+from src.modelo.EstudianteBase import Interprete
 from src.modelo.declarative_base import Session
 
 class AlbumTestCase(unittest.TestCase):

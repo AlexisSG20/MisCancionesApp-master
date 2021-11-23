@@ -5,9 +5,9 @@ import random
 from faker import Faker
 
 from src.logica.coleccion import Coleccion
-from src.modelo.album import Album,Medio
+from src.modelo.estudiante import Album,Medio
 from src.modelo.cancion import Cancion,AlbumCancion
-from src.modelo.interprete import Interprete
+from src.modelo.EstudianteBase import Interprete
 from src.modelo.declarative_base import Session
 from fake_providers import *
 
